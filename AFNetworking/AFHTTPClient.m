@@ -394,7 +394,7 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 
     NSString *className = NSStringFromClass(operationClass);
     [self.registeredHTTPOperationClassNames removeObject:className];
-    [self.registeredHTTPOperationClassNames insertObject:className atIndex:0];
+    [self.registeredHTTPOperationClassNames addObject:className];
 
     return YES;
 }
